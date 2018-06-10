@@ -82,6 +82,7 @@ create table PACIENTEETAPA
    IDETAPA              int not null  comment '',
    IDREGISTROCIVIL      int not null  comment '',
    FECHA                date not null  comment '',
+   FECHAREAL		date not null  comment '',
    ESTADO               char(20) not null  comment ''
 );
 
@@ -128,56 +129,56 @@ INSERT INTO `etapa` (`IDETAPA`, `NOMBRE`) VALUES ('8', 'etapa8');
 INSERT INTO `etapa` (`IDETAPA`, `NOMBRE`) VALUES ('9', 'etapa9');
 
 
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('1','123','2018-06-13','aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('1','123','2018-08-13','aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('1','123','2018-11-13','aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('2','123','2018-01-13','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('2','123','2018-04-13','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('2','123','2018-05-13','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('2','123','2018-08-13','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('3','123','2018-11-13','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('3','123','2018-14-13','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('3','123','2019-06-13','aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('3','123','2019-08-13','aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('4','123','2019-11-13','aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('4','123','2019-01-13','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('4','123','2019-04-13','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('4','123','2019-05-13','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('4','123','2019-08-13','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('5','123','2019-11-13','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('6','123','2019-14-13','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('6','123','2020-06-13','aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('6','123','2020-08-13','aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('6','123','2020-11-13','aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('6','123','2020-01-13','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('7','123','2020-04-13','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('7','123','2020-05-13','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('8','123','2020-08-13','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('8','123','2020-11-13','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('8','123','2020-12-13','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('9','123','2021-01-13','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('9','123','2020-02-13','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('9','123','2020-03-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`,`FECHAREAL`, `ESTADO`) VALUES ('1','123','2018-06-13','2018-06-13','aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`,`FECHAREAL`, `ESTADO`) VALUES ('1','123','2018-08-13','2018-08-13','aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`,`FECHAREAL`, `ESTADO`) VALUES ('1','123','2018-11-13','2018-08-13','aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`,`FECHAREAL`, `ESTADO`) VALUES ('2','123','2018-01-13','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`,`FECHAREAL`, `ESTADO`) VALUES ('2','123','2018-04-13','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`,`FECHAREAL`, `ESTADO`) VALUES ('2','123','2018-05-13','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`,`FECHAREAL`, `ESTADO`) VALUES ('2','123','2018-08-13','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`,`FECHAREAL`, `ESTADO`) VALUES ('3','123','2018-11-13','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`,`FECHAREAL`, `ESTADO`) VALUES ('3','123','2018-14-13','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`,`FECHAREAL`, `ESTADO`) VALUES ('3','123','2019-06-13','2018-08-13','aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`,`FECHAREAL`, `ESTADO`) VALUES ('3','123','2019-08-13','2018-08-13','aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`,`FECHAREAL`, `ESTADO`) VALUES ('4','123','2019-11-13','2018-08-13','aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`,`FECHAREAL`, `ESTADO`) VALUES ('4','123','2019-01-13','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`,`FECHAREAL`, `ESTADO`) VALUES ('4','123','2019-04-13','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`,`FECHAREAL`, `ESTADO`) VALUES ('4','123','2019-05-13','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`,`FECHAREAL`, `ESTADO`) VALUES ('4','123','2019-08-13','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`,`FECHAREAL`,`ESTADO`) VALUES ('5','123','2019-11-13','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`,`FECHAREAL`, `ESTADO`) VALUES ('6','123','2019-14-13','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`,`FECHAREAL`, `ESTADO`) VALUES ('6','123','2020-06-13','2018-08-13','aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`,`FECHAREAL`, `ESTADO`) VALUES ('6','123','2020-08-13','2018-08-13','aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`,`FECHAREAL`, `ESTADO`) VALUES ('6','123','2020-11-13','2018-08-13','aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`,`FECHAREAL`,`ESTADO`) VALUES ('6','123','2020-01-13','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`,`FECHAREAL`, `ESTADO`) VALUES ('7','123','2020-04-13','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`,`FECHAREAL`, `ESTADO`) VALUES ('7','123','2020-05-13','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `FECHAREAL`,`ESTADO`) VALUES ('8','123','2020-08-13','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`,`FECHAREAL`, `ESTADO`) VALUES ('8','123','2020-11-13','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`,`FECHAREAL`, `ESTADO`) VALUES ('8','123','2020-12-13','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `FECHAREAL`,`ESTADO`) VALUES ('9','123','2021-01-13','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`,`FECHAREAL`, `ESTADO`) VALUES ('9','123','2020-02-13','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `FECHAREAL`,`ESTADO`) VALUES ('9','123','2020-03-13','2018-08-13','no aplicada');
 
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('1','124','2018-12-18','aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('2','124','2018-02-18','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('3','124','2018-04-18','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('4','124','2018-07-18','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('5','124','2018-10-18','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('6','124','2018-12-18','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('7','124','2018-01-18','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('8','124','2018-03-18','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('9','124','2018-06-18','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('1','124','2018-12-18','2018-08-13','aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('2','124','2018-02-18','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('3','124','2018-04-18','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('4','124','2018-07-18','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('5','124','2018-10-18','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('6','124','2018-12-18','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('7','124','2018-01-18','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('8','124','2018-03-18','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('9','124','2018-06-18','2018-08-13','no aplicada');
 
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('1','125','2018-10-13','aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('2','125','2018-12-13','aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('3','125','2018-02-13','aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('4','125','2018-04-13','aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('5','125','2018-06-13','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('6','125','2018-08-13','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('7','125','2018-09-13','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('8','125','2018-11-13','no aplicada');
-INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('9','125','2018-12-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('1','125','2018-10-13','2018-08-13','aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('2','125','2018-12-13','2018-08-13','aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('3','125','2018-02-13','2018-08-13','aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('4','125','2018-04-13','2018-08-13','aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('5','125','2018-06-13','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('6','125','2018-08-13','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('7','125','2018-09-13','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('8','125','2018-11-13','2018-08-13','no aplicada');
+INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('9','125','2018-12-13','2018-08-13','no aplicada');
 
 INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('1','126','2018-09-13','aplicada');
 INSERT INTO `pacienteetapa`(`IDETAPA`, `IDREGISTROCIVIL`, `FECHA`, `ESTADO`) VALUES ('2','126','2018-11-13','aplicada');

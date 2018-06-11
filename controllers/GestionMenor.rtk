@@ -1,0 +1,66 @@
+#lang racket
+(require racket/gui/base)
+(require "../Conexion.rtk")
+(require db)
+
+(provide obtieneDatosMenor)
+(provide existe-registro)
+
+(define (obtieneDatosMenor 
+            registroCivil 
+            nombresApellidos 
+            fechaNacimiento 
+            genero 
+            nombreContacto 
+            telefonoContacto 
+            direccionContacto) 
+            
+  (verificar_datos conn  
+  ;(query-exec conn insertarMenor 
+                        registroCivil 
+                        nombresApellidos 
+                        fechaNacimiento 
+                        nombreContacto 
+                        telefonoContacto 
+                        direccionContacto
+                        genero))
+                         
+
+
+
+;   INSERTA LOS DATOS DEL MENOR EN LA BASE DE DATOS
+(define insertarMenor (
+                       prepare conn "INSERT INTO `paciente`(`idRegistroCivil`, `NombresApellidos`, `fechaNacimiento`, `NombreContacto`, `telefonoContacto`, `direccion`, `genero`) VALUES (?,?,?,?,?,?,?)"))
+
+
+
+(define (verificar_datos conn registroCivil nombresApellidos fechaNacimiento 
+                        nombreContacto telefonoContacto direccionContacto genero)
+  (cond
+    [(eqv? registroCivil "") "Campo Registro Civil vacio"]
+    [(eqv? nombresApellidos "") "Campo Nombres y Apellidos vacio"]
+    [(eqv? fechaNacimiento "") "Campo Fecha Nacimiento vacio"]
+    [(eqv? nombreContacto "") "Campo Nombre (Padre/Madre) vacio"]
+    [(eqv? telefonoContacto "") "Campo Telefono Contacto vacio"]
+    [(eqv? direccionContacto "") "Campo Dirección Contacto vacio"]
+    [(eqv? genero "") "Campo Género vacio"]
+    [(cond
+       [(existe-registro registroCivil)  "El Registro Civil ya existe!"]
+       [else    (query-exec conn insertarMenor 
+                        registroCivil 
+                        nombresApellidos 
+                        fechaNacimiento 
+                        nombreContacto 
+                        telefonoContacto 
+                        direccionContacto
+                        genero ) "Menor registrado!"])]))
+                         
+;   VERIFICAR SI EL REGISTRO CIVIL YA EXISTE
+(define verificarRegistroCivil (prepare conn "SELECT * FROM `paciente` WHERE `idRegistroCivil` = ?"))
+(define (existe-registro regCivil)
+  (not (equal? (query-maybe-row conn verificarRegistroCivil regCivil) #f))
+)
+; (define consultarMenor (prepare conn "SELECT * FROM `paciente` WHERE `idRegistroCivil` = ?"))
+
+; (query-rows conn "Select * from paciente")
+; (query-rows conn "Select * from paciente")
